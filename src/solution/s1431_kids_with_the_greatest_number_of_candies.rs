@@ -48,19 +48,10 @@ pub struct Solution {}
 impl Solution {
     pub fn kids_with_candies(candies: Vec<i32>, extra_candies: i32) -> Vec<bool> {
         let mut result = Vec::new();
-        let mut biggest_number = candies[0];
-        
-        //find biggest number
+        let biggest_number = candies.iter().max().unwrap();
+
         for kid in &candies {
-            if kid > &biggest_number {
-                biggest_number = *kid;
-            }
-        }
-        
-        //result result
-        for kid in &candies {
-            result.push(kid + extra_candies >= biggest_number);
-            
+            result.push(kid + extra_candies >= *biggest_number);
         }
     
         println!("{:?}", result);
