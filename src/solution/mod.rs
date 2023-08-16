@@ -1,1 +1,1 @@
-mod s1431_kids_with_the_greatest_number_of_candies;
+mod s1431_kids_with_the_greatest_number_of_candies;mod s0088_merge_sorted_array;
